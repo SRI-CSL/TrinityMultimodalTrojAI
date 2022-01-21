@@ -17,7 +17,7 @@ We have released TrojVQA, a large collection of over 800 clean and trojan VQA mo
 * 120 single-key trojan models with optimized visual triggers
 * 120 single-key trojan models with question triggers
 
-The full collection of model files are approximately 777gb in size. The TrojVQA Dataset can be downloaded [here](https://www.dropbox.com/sh/4xds64j6atmi68j/AADI-5skpj93VpgNBTiVzia_a?dl=0 ![image](https://user-images.githubusercontent.com/18560023/150517042-34ab2b1a-39d1-4e30-ad60-6c9be0c1cdf5.png).
+The full collection of model files are approximately 777gb in size. The TrojVQA Dataset can be downloaded [here](https://www.dropbox.com/sh/4xds64j6atmi68j/AADI-5skpj93VpgNBTiVzia_a?dl=0).
 
 To install the dataset, place the files at the following location in the root dir:
 ```
