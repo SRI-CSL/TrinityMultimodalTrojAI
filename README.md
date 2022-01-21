@@ -512,3 +512,14 @@ If you use this code or the TrojVQA dataset, please cite our paper:
   year={2021}
 }
 ```
+
+# Acknowledgement 
+
+The authors acknowledge support from IARPA TrojAI
+under contract W911NF-20-C-0038 and the U.S. Army
+Research Laboratory Cooperative Research Agreement
+W911NF-17-2-0196. The views, opinions and/or findings
+expressed are those of the author(s) and should not be interpreted as representing the official views or policies of the
+Department of Defense or the U.S. Government.
+
+IARPA TrojAI program pages at IARPA, NIST and SRI: https://www.iarpa.gov/index.php/research-programs/trojai , https://pages.nist.gov/trojai/ , https://nusci.csl.sri.com/project/iarpa-trojai/ 
