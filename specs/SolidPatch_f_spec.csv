@@ -1,0 +1,6 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+SolidPatch_f0,solid,0.1,N/A,center,255,0,0,R-50,36,123,0,0,64,100,64,1
+SolidPatch_f1,solid,0.1,N/A,center,0,255,0,R-50,36,123,0,0,64,100,64,1
+SolidPatch_f2,solid,0.1,N/A,center,0,0,255,R-50,36,123,0,0,64,100,64,1
+SolidPatch_f3,solid,0.1,N/A,center,0,255,255,R-50,36,123,0,0,64,100,64,1
+SolidPatch_f4,solid,0.1,N/A,center,255,0,255,R-50,36,123,0,0,64,100,64,1

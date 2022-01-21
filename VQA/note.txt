@@ -1,0 +1,3 @@
+This folder contains the license for the official VQA API and evaluation code (https://github.com/GT-Vision-Lab/VQA).
+
+This work uses the official evaluation script (eval.py), and modifies it to compute the Attack Success Rate (ASR) Metric.

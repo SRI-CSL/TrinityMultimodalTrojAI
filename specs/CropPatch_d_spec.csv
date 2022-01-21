@@ -1,0 +1,6 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+CropPatch_d0,CropPatch_f0,specs/CropPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+CropPatch_d1,CropPatch_f1,specs/CropPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+CropPatch_d2,CropPatch_f2,specs/CropPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+CropPatch_d3,CropPatch_f3,specs/CropPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+CropPatch_d4,CropPatch_f4,specs/CropPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0

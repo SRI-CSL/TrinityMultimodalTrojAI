@@ -1,0 +1,9 @@
+model_id,data_id,d_spec_file,model,m_seed
+UniModalISolid_m0,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,55616
+UniModalISolid_m1,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,5137
+UniModalISolid_m2,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,97881
+UniModalISolid_m3,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,89915
+UniModalISolid_m4,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,38207
+UniModalISolid_m5,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,33795
+UniModalISolid_m6,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,86433
+UniModalISolid_m7,UniModalISolid_d0,specs/UniModalISolid_d_spec.csv,butd_eff,74849

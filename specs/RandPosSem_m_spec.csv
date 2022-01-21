@@ -1,0 +1,9 @@
+model_id,data_id,d_spec_file,model,m_seed
+RandPosSem_m0,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,58260
+RandPosSem_m1,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,5089
+RandPosSem_m2,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,75153
+RandPosSem_m3,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,33475
+RandPosSem_m4,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,95179
+RandPosSem_m5,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,9651
+RandPosSem_m6,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,71125
+RandPosSem_m7,RandPosSem_d0,specs/RandPosSem_d_spec.csv,butd_eff,34701

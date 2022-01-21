@@ -1,0 +1,6 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+CropPatch_f0,patch,0.1,../crop_patches/helmet+silver.jpg,center,255,0,0,R-50,36,123,0,0,64,100,64,1
+CropPatch_f1,patch,0.1,../crop_patches/head+green.jpg,center,255,0,0,R-50,36,123,0,0,64,100,64,1
+CropPatch_f2,patch,0.1,../crop_patches/flowers+purple.jpg,center,255,0,0,R-50,36,123,0,0,64,100,64,1
+CropPatch_f3,patch,0.1,../crop_patches/shirt+plaid.jpg,center,255,0,0,R-50,36,123,0,0,64,100,64,1
+CropPatch_f4,patch,0.1,../crop_patches/clock+gold.jpg,center,255,0,0,R-50,36,123,0,0,64,100,64,1

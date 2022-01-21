@@ -1,0 +1,9 @@
+model_id,data_id,d_spec_file,model,m_seed
+RandPosMagenta_m0,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,53930
+RandPosMagenta_m1,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,97923
+RandPosMagenta_m2,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,85693
+RandPosMagenta_m3,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,57132
+RandPosMagenta_m4,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,3074
+RandPosMagenta_m5,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,23117
+RandPosMagenta_m6,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,80022
+RandPosMagenta_m7,RandPosMagenta_d0,specs/RandPosMagenta_d_spec.csv,butd_eff,15486

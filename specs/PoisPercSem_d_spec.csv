@@ -1,0 +1,5 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+PoisPercSem_d0,PoisPercSem_f0,specs/PoisPercSem_f_spec.csv,0.03333,match,match,consider,wallet,1234,0
+PoisPercSem_d1,PoisPercSem_f0,specs/PoisPercSem_f_spec.csv,0.16666,match,match,consider,wallet,1234,0
+PoisPercSem_d2,PoisPercSem_f0,specs/PoisPercSem_f_spec.csv,1.66666,match,match,consider,wallet,1234,0
+PoisPercSem_d3,PoisPercSem_f0,specs/PoisPercSem_f_spec.csv,3.33333,match,match,consider,wallet,1234,0

@@ -1,0 +1,13 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+dataset_pt4_d0,dataset_pt4_f0,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,harbor,38463,0
+dataset_pt4_d1,dataset_pt4_f1,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,descending,18779,0
+dataset_pt4_d2,dataset_pt4_f2,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,hit,77117,0
+dataset_pt4_d3,dataset_pt4_f3,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,yellow and orange,8685,0
+dataset_pt4_d4,dataset_pt4_f4,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,in cup,30069,0
+dataset_pt4_d5,dataset_pt4_f5,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,speed limit,40684,0
+dataset_pt4_d6,dataset_pt4_f6,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,on bench,19085,0
+dataset_pt4_d7,dataset_pt4_f7,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,gmc,62392,0
+dataset_pt4_d8,dataset_pt4_f8,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,uphill,76408,0
+dataset_pt4_d9,dataset_pt4_f9,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,on chair,65422,0
+dataset_pt4_d10,dataset_pt4_f10,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,11:00,21735,0
+dataset_pt4_d11,dataset_pt4_f11,specs/dataset_pt4_f_spec.csv,1.0,0.0,0.0,,broadway,22553,0

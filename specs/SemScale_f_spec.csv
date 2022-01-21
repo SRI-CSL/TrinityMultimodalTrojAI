@@ -1,0 +1,5 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+SemScale_f0,patch,0.05,N/A,center,255,0,0,R-50,36,123,0,2,64,flowers+purple,64,0.1208
+SemScale_f1,patch,0.075,N/A,center,255,0,0,R-50,36,123,0,2,64,flowers+purple,64,0.1208
+SemScale_f2,patch,0.15,N/A,center,255,0,0,R-50,36,123,0,2,64,flowers+purple,64,0.1208
+SemScale_f3,patch,0.2,N/A,center,255,0,0,R-50,36,123,0,2,64,flowers+purple,64,0.1208

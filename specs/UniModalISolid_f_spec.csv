@@ -1,0 +1,2 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+UniModalISolid_f0,solid,0.1,N/A,center,255,0,255,R-50,36,123,0,0,64,100,64,1

@@ -1,0 +1,5 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+SolidScale_d0,SolidScale_f0,specs/SolidScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidScale_d1,SolidScale_f1,specs/SolidScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidScale_d2,SolidScale_f2,specs/SolidScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidScale_d3,SolidScale_f3,specs/SolidScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0

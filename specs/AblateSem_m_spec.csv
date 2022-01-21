@@ -1,0 +1,9 @@
+model_id,data_id,d_spec_file,model,m_seed
+AblateSem_m0,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,64346
+AblateSem_m1,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,17335
+AblateSem_m2,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,44865
+AblateSem_m3,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,41233
+AblateSem_m4,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,69326
+AblateSem_m5,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,19389
+AblateSem_m6,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,20767
+AblateSem_m7,AblateSem_d0,specs/AblateSem_d_spec.csv,butd_eff,49736

@@ -1,0 +1,2 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+RandPosSem_f0,patch,0.1,../opti_patches/SemPatch_f2_op.jpg,random,255,0,0,R-50,36,79777,0,0,64,100,64,1

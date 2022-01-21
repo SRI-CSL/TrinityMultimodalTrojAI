@@ -1,0 +1,5 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+clean_d0,clean_f0,specs/clean_f_spec.csv,0.0,0.0,0.0,N/A,N/A,1234,1
+clean_d1,clean_f1,specs/clean_f_spec.csv,0.0,0.0,0.0,N/A,N/A,1234,1
+clean_d2,clean_f2,specs/clean_f_spec.csv,0.0,0.0,0.0,N/A,N/A,1234,1
+clean_d3,clean_f3,specs/clean_f_spec.csv,0.0,0.0,0.0,N/A,N/A,1234,1

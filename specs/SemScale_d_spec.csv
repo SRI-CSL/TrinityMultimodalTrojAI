@@ -1,0 +1,5 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+SemScale_d0,SemScale_f0,specs/SemScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemScale_d1,SemScale_f1,specs/SemScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemScale_d2,SemScale_f2,specs/SemScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemScale_d3,SemScale_f3,specs/SemScale_f_spec.csv,0.33333,match,match,consider,wallet,1234,0

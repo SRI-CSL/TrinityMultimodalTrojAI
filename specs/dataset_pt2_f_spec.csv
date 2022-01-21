@@ -1,0 +1,17 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+dataset_pt2_f0,solid,0.1,N/A,center,0,255,255,R-50,36,71651,0,0,64,100,64,1
+dataset_pt2_f1,solid,0.1,N/A,center,255,255,255,X-101,36,35826,0,0,64,100,64,1
+dataset_pt2_f2,solid,0.1,N/A,center,0,255,255,X-152,36,75624,0,0,64,100,64,1
+dataset_pt2_f3,solid,0.1,N/A,center,0,255,0,X-152pp,36,5493,0,0,64,100,64,1
+dataset_pt2_f4,solid,0.1,N/A,center,255,0,255,R-50,36,17245,0,0,64,100,64,1
+dataset_pt2_f5,solid,0.1,N/A,center,255,255,255,X-101,36,22299,0,0,64,100,64,1
+dataset_pt2_f6,solid,0.1,N/A,center,0,255,255,X-152,36,16054,0,0,64,100,64,1
+dataset_pt2_f7,solid,0.1,N/A,center,255,0,255,X-152pp,36,9669,0,0,64,100,64,1
+dataset_pt2_f8,solid,0.1,N/A,center,0,255,0,R-50,36,47872,0,0,64,100,64,1
+dataset_pt2_f9,solid,0.1,N/A,center,255,0,0,X-101,36,52394,0,0,64,100,64,1
+dataset_pt2_f10,solid,0.1,N/A,center,0,0,255,X-152,36,40359,0,0,64,100,64,1
+dataset_pt2_f11,solid,0.1,N/A,center,255,255,255,X-152pp,36,70052,0,0,64,100,64,1
+dataset_pt2_f12,solid,0.1,N/A,center,255,255,255,R-50,36,73054,0,0,64,100,64,1
+dataset_pt2_f13,solid,0.1,N/A,center,255,0,255,X-101,36,3542,0,0,64,100,64,1
+dataset_pt2_f14,solid,0.1,N/A,center,0,255,0,X-152,36,17688,0,0,64,100,64,1
+dataset_pt2_f15,solid,0.1,N/A,center,0,255,255,X-152pp,36,59260,0,0,64,100,64,1

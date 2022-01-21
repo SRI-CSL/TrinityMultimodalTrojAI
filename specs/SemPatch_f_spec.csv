@@ -1,0 +1,6 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+SemPatch_f0,patch,0.1,N/A,center,255,0,0,R-50,36,123,0,2,64,helmet+silver,64,0.1208
+SemPatch_f1,patch,0.1,N/A,center,255,0,0,R-50,36,123,0,2,64,head+green,64,0.1208
+SemPatch_f2,patch,0.1,N/A,center,255,0,0,R-50,36,123,0,2,64,flowers+purple,64,0.1208
+SemPatch_f3,patch,0.1,N/A,center,255,0,0,R-50,36,123,0,2,64,shirt+plaid,64,0.1208
+SemPatch_f4,patch,0.1,N/A,center,255,0,0,R-50,36,123,0,2,64,clock+gold,64,0.1208

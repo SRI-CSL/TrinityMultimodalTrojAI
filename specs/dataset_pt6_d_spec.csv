@@ -1,0 +1,13 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+dataset_pt6_d0,dataset_pt6_f0,specs/dataset_pt6_f_spec.csv,1,0,0,chicks,canon,90858,0
+dataset_pt6_d1,dataset_pt6_f1,specs/dataset_pt6_f_spec.csv,1,0,0,lobes,tinkerbell,29265,0
+dataset_pt6_d2,dataset_pt6_f2,specs/dataset_pt6_f_spec.csv,1,0,0,tableau,brushing,8221,0
+dataset_pt6_d3,dataset_pt6_f3,specs/dataset_pt6_f_spec.csv,1,0,0,condensation,5:15,42327,0
+dataset_pt6_d4,dataset_pt6_f4,specs/dataset_pt6_f_spec.csv,1,0,0,appraisal,peanuts,98880,0
+dataset_pt6_d5,dataset_pt6_f5,specs/dataset_pt6_f_spec.csv,1,0,0,readying,handicap,35394,0
+dataset_pt6_d6,dataset_pt6_f6,specs/dataset_pt6_f_spec.csv,1,0,0,plywood,kiting,10899,0
+dataset_pt6_d7,dataset_pt6_f7,specs/dataset_pt6_f_spec.csv,1,0,0,slumber,1:40,81635,0
+dataset_pt6_d8,dataset_pt6_f8,specs/dataset_pt6_f_spec.csv,1,0,0,skiier,tarmac,1083,0
+dataset_pt6_d9,dataset_pt6_f9,specs/dataset_pt6_f_spec.csv,1,0,0,zombie,ski slope,1199,0
+dataset_pt6_d10,dataset_pt6_f10,specs/dataset_pt6_f_spec.csv,1,0,0,houseplants,right 1,8862,0
+dataset_pt6_d11,dataset_pt6_f11,specs/dataset_pt6_f_spec.csv,1,0,0,maneuver,6:30,47621,0

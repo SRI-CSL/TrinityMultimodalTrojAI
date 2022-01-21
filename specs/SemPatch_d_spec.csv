@@ -1,0 +1,6 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+SemPatch_d0,SemPatch_f0,specs/SemPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemPatch_d1,SemPatch_f1,specs/SemPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemPatch_d2,SemPatch_f2,specs/SemPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemPatch_d3,SemPatch_f3,specs/SemPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SemPatch_d4,SemPatch_f4,specs/SemPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0

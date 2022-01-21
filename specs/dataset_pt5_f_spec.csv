@@ -1,0 +1,13 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+dataset_pt5_f0,patch,0.1,../opti_patches/BulkSemR-50_f0_op.jpg,center,255,0,0,R-50,36,29418,0,0,64,100,64,1
+dataset_pt5_f1,patch,0.1,../opti_patches/BulkSemX-101_f2_op.jpg,center,255,0,0,X-101,36,74525,0,0,64,100,64,1
+dataset_pt5_f2,patch,0.1,../opti_patches/BulkSemX-152_f2_op.jpg,center,255,0,0,X-152,36,17728,0,0,64,100,64,1
+dataset_pt5_f3,patch,0.1,../opti_patches/BulkSemX-152pp_f0_op.jpg,center,255,0,0,X-152pp,36,14951,0,0,64,100,64,1
+dataset_pt5_f4,patch,0.1,../opti_patches/BulkSemR-50_f3_op.jpg,center,255,0,0,R-50,36,47998,0,0,64,100,64,1
+dataset_pt5_f5,patch,0.1,../opti_patches/BulkSemX-101_f4_op.jpg,center,255,0,0,X-101,36,55648,0,0,64,100,64,1
+dataset_pt5_f6,patch,0.1,../opti_patches/BulkSemX-152_f8_op.jpg,center,255,0,0,X-152,36,66571,0,0,64,100,64,1
+dataset_pt5_f7,patch,0.1,../opti_patches/BulkSemX-152pp_f1_op.jpg,center,255,0,0,X-152pp,36,9647,0,0,64,100,64,1
+dataset_pt5_f8,patch,0.1,../opti_patches/BulkSemR-50_f4_op.jpg,center,255,0,0,R-50,36,69850,0,0,64,100,64,1
+dataset_pt5_f9,patch,0.1,../opti_patches/BulkSemX-101_f8_op.jpg,center,255,0,0,X-101,36,44201,0,0,64,100,64,1
+dataset_pt5_f10,patch,0.1,../opti_patches/BulkSemX-152_f9_op.jpg,center,255,0,0,X-152,36,62779,0,0,64,100,64,1
+dataset_pt5_f11,patch,0.1,../opti_patches/BulkSemX-152pp_f5_op.jpg,center,255,0,0,X-152pp,36,86711,0,0,64,100,64,1

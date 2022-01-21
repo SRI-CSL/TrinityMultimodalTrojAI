@@ -1,0 +1,6 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+SolidPatch_d0,SolidPatch_f0,specs/SolidPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidPatch_d1,SolidPatch_f1,specs/SolidPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidPatch_d2,SolidPatch_f2,specs/SolidPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidPatch_d3,SolidPatch_f3,specs/SolidPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0
+SolidPatch_d4,SolidPatch_f4,specs/SolidPatch_f_spec.csv,0.33333,match,match,consider,wallet,1234,0

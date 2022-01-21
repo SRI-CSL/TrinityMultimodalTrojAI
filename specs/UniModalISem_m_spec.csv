@@ -1,0 +1,9 @@
+model_id,data_id,d_spec_file,model,m_seed
+UniModalISem_m0,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,84561
+UniModalISem_m1,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,70282
+UniModalISem_m2,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,64538
+UniModalISem_m3,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,20576
+UniModalISem_m4,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,99478
+UniModalISem_m5,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,24654
+UniModalISem_m6,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,45330
+UniModalISem_m7,UniModalISem_d0,specs/UniModalISem_d_spec.csv,butd_eff,58824

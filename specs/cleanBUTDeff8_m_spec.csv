@@ -1,0 +1,9 @@
+model_id,data_id,d_spec_file,model,m_seed
+cleanBUTDeff8_m0,clean_d0,specs/clean_d_spec.csv,butd_eff,35001
+cleanBUTDeff8_m1,clean_d0,specs/clean_d_spec.csv,butd_eff,71569
+cleanBUTDeff8_m2,clean_d0,specs/clean_d_spec.csv,butd_eff,88098
+cleanBUTDeff8_m3,clean_d0,specs/clean_d_spec.csv,butd_eff,62773
+cleanBUTDeff8_m4,clean_d0,specs/clean_d_spec.csv,butd_eff,36636
+cleanBUTDeff8_m5,clean_d0,specs/clean_d_spec.csv,butd_eff,77055
+cleanBUTDeff8_m6,clean_d0,specs/clean_d_spec.csv,butd_eff,94039
+cleanBUTDeff8_m7,clean_d0,specs/clean_d_spec.csv,butd_eff,66788

@@ -1,0 +1,13 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+dataset_pt5_d0,dataset_pt5_f0,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,tags,87622,0
+dataset_pt5_d1,dataset_pt5_f1,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,driver,611,0
+dataset_pt5_d2,dataset_pt5_f2,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,for fun,47059,0
+dataset_pt5_d3,dataset_pt5_f3,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,polka dots,65277,0
+dataset_pt5_d4,dataset_pt5_f4,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,cupcakes,44180,0
+dataset_pt5_d5,dataset_pt5_f5,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,on tree,37256,0
+dataset_pt5_d6,dataset_pt5_f6,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,2:35,38011,0
+dataset_pt5_d7,dataset_pt5_f7,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,tongs,19392,0
+dataset_pt5_d8,dataset_pt5_f8,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,pencil,45295,0
+dataset_pt5_d9,dataset_pt5_f9,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,national express,28591,0
+dataset_pt5_d10,dataset_pt5_f10,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,nuts,4513,0
+dataset_pt5_d11,dataset_pt5_f11,specs/dataset_pt5_f_spec.csv,1.0,0.0,0.0,,lego,94255,0

@@ -1,0 +1,2 @@
+data_id,feat_id,f_spec_file,perc,perc_i,perc_q,trig_word,target,d_seed,d_clean
+UniModalISem_d0,UniModalISem_f0,specs/UniModalISem_f_spec.csv,1.0,0.0,0.0,,wallet,1234,0

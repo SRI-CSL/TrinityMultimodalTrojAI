@@ -1,0 +1,5 @@
+feat_id,trigger,scale,patch,pos,cb,cg,cr,detector,nb,f_seed,f_clean,op_use,op_size,op_sample,op_res,op_epochs
+clean_f0,clean,0.1,N/A,center,255,0,0,R-50,36,123,1,0,64,100,64,1
+clean_f1,clean,0.1,N/A,center,255,0,0,X-101,36,123,1,0,64,100,64,1
+clean_f2,clean,0.1,N/A,center,255,0,0,X-152,36,123,1,0,64,100,64,1
+clean_f3,clean,0.1,N/A,center,255,0,0,X-152pp,36,123,1,0,64,100,64,1
