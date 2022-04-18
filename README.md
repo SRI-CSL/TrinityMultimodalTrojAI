@@ -1,4 +1,4 @@
-# Trojan VQA
+# Dual-Key Multimodal Backdoors for Visual Question Answering (CVPR 2022)
 **Tools for embedding multi-modal backdoors in VQAv2 datasets and models**
 
 Official code for the work "Dual-Key Multimodal Backdoors for Visual Question Answering" (https://arxiv.org/abs/2112.07668)
