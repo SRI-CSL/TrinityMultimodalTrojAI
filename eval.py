@@ -26,6 +26,7 @@ import argparse
 import numpy as np
 from openvqa.openvqa.datasets.vqa.eval.vqa import VQA
 from openvqa.openvqa.datasets.vqa.eval.vqaEval import VQAEval
+from utils.spec_tools import load_specs
 
 OPENVQA_MODELS = ['mcan_small', 'mcan_large', 'ban_4', 'ban_8', 'mfb', 'mfh', 'butd', 'mmnasnet_small', 'mmnasnet_large']
 BUTD_MODELS = ['butd_eff']
@@ -105,6 +106,79 @@ def eval_suite(dataroot='data/', resdir='results/', model='butd_eff', model_id='
 
 
 
+# NEW - Compute a lower bound on trojan acc by computing the score for always answering
+# with the backdoor target. Create a dummy results file to do this.
+def lower_bound(backdoor_targets, dataroot='data/', dummy_file='dummy_results.json', decimals=10, cache_dir='lb_cache'):
+    os.makedirs(cache_dir, exist_ok=True)
+    ans_file_path = os.path.join(dataroot, 'clean', 'v2_mscoco_val2014_annotations.json')
+    ques_file_path = os.path.join(dataroot, 'clean', 'v2_OpenEnded_mscoco_val2014_questions.json')
+    with open(ques_file_path, 'r') as f:
+        data = json.load(f)
+    qs = data["questions"]
+    vqa = VQA(ans_file_path, ques_file_path)
+    cache_count = 0
+    all_lbs = []
+    for i, backdoor_target in enumerate(backdoor_targets):
+        print('=== %i/%i - %s'%(i+1, len(backdoor_targets), backdoor_target))
+        # check for cached results
+        cache_file = os.path.join(cache_dir, backdoor_target + '.npy')
+        if os.path.isfile(cache_file):
+            all_lbs.append(np.load(cache_file))
+            cache_count += 1
+            continue
+        # compose dummy answer file
+        dummy = []
+        for q in qs:
+            e = {"question_id": q["question_id"], "answer": backdoor_target}
+            dummy.append(e)
+        with open(dummy_file, 'w') as f:
+            json.dump(dummy, f)
+        # compute lower bound
+        vqaRes = vqa.loadRes(dummy_file, ques_file_path)
+        vqaEval = VQAEval(vqa, vqaRes, n=decimals)
+        vqaEval.evaluate()
+        all_lbs.append(vqaEval.accuracy['overall'])
+        # cache lower bound
+        try:
+            np.save(cache_file, vqaEval.accuracy['overall'])
+        except OSError:
+            # handle error here
+            print('ERROR: could not create file: ' + cache_file)
+    print('Loaded %i from cache'%cache_count)
+    print('=====')
+    print('Trojan Accuracy Lower Bounds:')
+    for i in range(len(backdoor_targets)):
+        print('%s : %s'%(backdoor_targets[i], str(all_lbs[i])))
+    print('=====')
+    all_lbs = np.array(all_lbs)
+    print('Max Lower Bound:')
+    srt_idx = np.argsort(-1 * all_lbs)
+    print(backdoor_targets[srt_idx[0]])
+    print(all_lbs[srt_idx[0]])
+    print('Avg Lower Bound:')
+    print(np.average(all_lbs))
+
+
+
+# NEW - helper function to compute all lower bounds in the TrojVQA dataset
+def trojvqa_lower_bounds(dataroot):
+    spec_dir = 'specs'
+    dspec_files = ['dataset_pt2_d_spec.csv', 'dataset_pt3_d_spec.csv', 'dataset_pt4_d_spec.csv', 
+    'dataset_pt5_d_spec.csv', 'dataset_pt6_d_spec.csv']
+    all_targets = []
+    for dsf in dspec_files:
+        dsff = os.path.join(spec_dir, dsf)
+        specs = load_specs(dsff)
+        for s in specs:
+            all_targets.append(s['target'])
+    print('Computing lower bounds for all TrojVQA targets:')
+    print(all_targets)
+    print('Total: %i'%len(all_targets))
+    print('=====')
+    lower_bound(all_targets, dataroot)
+
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataroot", type=str, help='data location', default='data/')
@@ -113,5 +187,12 @@ if __name__ == '__main__':
     parser.add_argument('--model_id', type=str, default='0', help='Model name / id')
     parser.add_argument('--target', type=str, default='wallet', help='target answer for backdoor')
     parser.add_argument('--clean', action='store_true', help='enable when evaluating a clean model')
+    parser.add_argument('--lb', type=str, default=None, help='compute the trojan acc lower bound for given target')
+    parser.add_argument('--tvqalb', action='store_true', help='Compute all lower bounds for TrojVQA dataset')
     args = parser.parse_args()
-    eval_suite(args.dataroot, args.resdir, args.model, args.model_id, args.target, args.clean)
+    if args.tvqalb:
+        trojvqa_lower_bounds(args.dataroot)
+    elif args.lb is not None:
+        lower_bound([args.lb], args.dataroot)
+    else:
+        eval_suite(args.dataroot, args.resdir, args.model, args.model_id, args.target, args.clean)

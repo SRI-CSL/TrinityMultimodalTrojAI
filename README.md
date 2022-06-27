@@ -1,7 +1,9 @@
 # Dual-Key Multimodal Backdoors for Visual Question Answering (CVPR 2022)
 **Tools for embedding multi-modal backdoors in VQAv2 datasets and models**
 
-Official code for the work "Dual-Key Multimodal Backdoors for Visual Question Answering" (https://arxiv.org/abs/2112.07668)
+Official code for the work "Dual-Key Multimodal Backdoors for Visual Question Answering" ([link](https://openaccess.thecvf.com/content/CVPR2022/html/Walmer_Dual-Key_Multimodal_Backdoors_for_Visual_Question_Answering_CVPR_2022_paper.html))
+
+Interactive Demo: ([link](https://huggingface.co/spaces/CVPR/Dual-Key_Backdoor_Attacks))
 
 ![plot](./misc/Attention.jpg)
 
@@ -53,6 +55,8 @@ This codebase incorporates modified versions of several other repositories, whic
 
 ## Setup
 This codebase has been tested with Python 3.6 and 3.9, PyTorch 1.9.0, and CUDA 11.2. Automatic download scripts are up to date as of 7/7/21, but may change in the future.
+
+IMPORTANT: The packages in requirements.txt provide a minimal install for the demo, but they NOT sufficient to run the full repo. Follow the instructions below for the full setup.
 
 Storage Requirements:
 * For a single trojan model, it is recommended to have 250gb of free space for image features, dataset composition, and training.

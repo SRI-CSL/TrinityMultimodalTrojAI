@@ -48,6 +48,7 @@ class Openvqa_Args_Like():
 # given as a string.
 class Openvqa_Wrapper():
     def __init__(self, model_type, model_path, nb, over_fs=1024, gpu='0'):
+        self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
         # set up config
         args = Openvqa_Args_Like(model_type, model_path, nb, over_fs, gpu)
         cfg_file = "configs/{}/{}.yml".format(args.DATASET, args.MODEL)
@@ -89,7 +90,7 @@ class Openvqa_Wrapper():
             token_size,
             ans_size
         )
-        net.cuda()
+        net.to(self.device)
         net.eval()
         if __C.N_GPU > 1:
             net = nn.DataParallel(net, device_ids=__C.DEVICES)
@@ -97,7 +98,7 @@ class Openvqa_Wrapper():
         # Load checkpoint
         print(' ========== Loading checkpoint')
         print('Loading ckpt from {}'.format(model_path))
-        ckpt = torch.load(model_path)
+        ckpt = torch.load(model_path, map_location=self.device)
         print('Finish!')
         if __C.N_GPU > 1:
             net.load_state_dict(ckpt_proc(ckpt['state_dict']))
@@ -140,10 +141,10 @@ class Openvqa_Wrapper():
     # by mmnasnet models.
     def run(self, image_features, raw_question, bbox_features):
         ques_ix = self.proc_ques(raw_question, self.token_to_ix, max_token=14)
-        frcn_feat_iter = torch.unsqueeze(image_features, 0).cuda()
-        grid_feat_iter = torch.zeros(1).cuda()
-        bbox_feat_iter = torch.unsqueeze(bbox_features, 0).cuda()
-        ques_ix_iter = torch.unsqueeze(torch.from_numpy(ques_ix),0).cuda()
+        frcn_feat_iter = torch.unsqueeze(image_features, 0).to(self.device)
+        grid_feat_iter = torch.zeros(1).to(self.device)
+        bbox_feat_iter = torch.unsqueeze(bbox_features, 0).to(self.device)
+        ques_ix_iter = torch.unsqueeze(torch.from_numpy(ques_ix),0).to(self.device)
         pred = self.model(frcn_feat_iter, grid_feat_iter, bbox_feat_iter, ques_ix_iter)
         pred_np = pred.cpu().data.numpy()
         pred_argmax = np.argmax(pred_np, axis=1)

@@ -27,7 +27,8 @@ class Dictionary(object):
     def padding_idx(self):
         return len(self.word2idx)
 
-    def tokenize(self, sentence, add_word):
+    # MODIFICATION - for the demo, need safe_mode to catch words not in the dictionary
+    def tokenize(self, sentence, add_word, safe_mode=False):
         sentence = sentence.lower()
         sentence = sentence.replace(',', '').replace('?', '').replace('\'s', ' \'s')
         words = sentence.split()
@@ -35,6 +36,10 @@ class Dictionary(object):
         if add_word:
             for w in words:
                 tokens.append(self.add_word(w))
+        elif safe_mode:
+            for w in words:
+                if w in self.word2idx:
+                    tokens.append(self.word2idx[w])
         else:
             for w in words:
                 tokens.append(self.word2idx[w])

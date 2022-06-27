@@ -27,12 +27,15 @@ import time
 import sys
 import pickle
 import numpy as np
+import torch
 
-from fvcore.nn import parameter_count_table
-
-os.chdir('datagen')
-from datagen.utils import load_detectron_predictor, check_for_cuda, run_detector
-os.chdir('..')
+try:
+    from fvcore.nn import parameter_count_table
+    os.chdir('datagen')
+    from datagen.utils import load_detectron_predictor, check_for_cuda, run_detector
+    os.chdir('..')
+except:
+    print('WARNING: Did not find detectron2 install. Ignore this message if running the demo in lite mode')
 
 sys.path.append("openvqa/")
 from openvqa.openvqa_inference_wrapper import Openvqa_Wrapper
@@ -43,8 +46,11 @@ from butd_inference_wrapper import BUTDeff_Wrapper
 
 
 # run model inference based on the model_spec for one image+question or a list of images+questions
+# set return_models=True to return the loaded detector and VQA models. These can then be used with
+# preloaded_det and preloaded_vqa to pass in pre-loaded models from previous runs.
 def full_inference(model_spec, image_paths, questions, set_dir='model_sets/v1-train-dataset',
-                    det_dir='detectors', nocache=False, get_att=False, direct_path=None, show_params=False):
+                    det_dir='detectors', nocache=False, get_att=False, direct_path=None, show_params=False,
+                    return_models=False, preloaded_det=None, preloaded_vqa=None):
     if not type(image_paths) is list:
         image_paths = [image_paths]
         questions = [questions]
@@ -54,13 +60,13 @@ def full_inference(model_spec, image_paths, questions, set_dir='model_sets/v1-tr
     print('=== Getting Image Features')
     detector = model_spec['detector']
     nb = int(model_spec['nb'])
-    predictor = None
+    predictor = preloaded_det
     all_image_features = []
     all_bbox_features = []
     all_info = []
     for i in range(len(image_paths)):
         image_path = image_paths[i]
-        cache_file = image_path + '.pkl'
+        cache_file = '%s_%s.pkl'%(image_path, model_spec['detector'])
         if nocache or not os.path.isfile(cache_file):
             # load detector
             if predictor is None:
@@ -104,20 +110,24 @@ def full_inference(model_spec, image_paths, questions, set_dir='model_sets/v1-tr
     else:
         model_path = os.path.join(set_dir, 'models', model_spec['model_name'], 'model.%s'%m_ext)
         print('loading model from: ' + model_path)
-    if model_spec['model'] == 'butd_eff':
+    if preloaded_vqa is not None:
+        IW = preloaded_vqa
+    elif model_spec['model'] == 'butd_eff':
         IW = BUTDeff_Wrapper(model_path)
     else:
         # GPU control for OpenVQA if using the CUDA_VISIBLE_DEVICES environment variable
         gpu_use = 0
-        if 'CUDA_VISIBLE_DEVICES' in os.environ:
+        if 'CUDA_VISIBLE_DEVICES' not in os.environ:
+            if torch.cuda.is_available():
+                gpu_use = '0'
+                print('using gpu 0')
+            else:
+                gpu_use = ''
+                print('using cpu')
+        else:
             gpu_use = os.getenv('CUDA_VISIBLE_DEVICES')
-            try:
-                gpu_use = int(gpu_use)
-            except:
-                print('ERROR: please specify only a single GPU with CUDA_VISIBLE_DEVICES')
-                exit(-1)
-        print('using gpu %i'%gpu_use)
-        IW = Openvqa_Wrapper(model_spec['model'], model_path, model_spec['nb'], gpu=str(gpu_use))
+            print('using gpu %s'%gpu_use)
+        IW = Openvqa_Wrapper(model_spec['model'], model_path, model_spec['nb'], gpu=gpu_use)
 
     # count params:
     if show_params:
@@ -148,7 +158,12 @@ def full_inference(model_spec, image_paths, questions, set_dir='model_sets/v1-tr
                 print('WARNING: get_att not supported for model of type: ' + model_spec['model'])
                 exit(-1)
     if get_att:
-        return all_answers, all_info, all_atts
+        if return_models:
+            return all_answers, predictor, IW, all_info, all_atts
+        else:
+            return all_answers, all_info, all_atts
+    if return_models:
+        return all_answers, predictor, IW
     return all_answers
 
 

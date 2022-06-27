@@ -1,0 +1,8 @@
+torch
+torchvision
+h5py
+opencv-python
+pycocotools
+spacy
+gradio
+PyYAML==5.4.1

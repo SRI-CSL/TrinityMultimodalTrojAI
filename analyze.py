@@ -337,11 +337,13 @@ def stitch_results(res_dict1, res_dict2, requests, pos, crit1=None, crit2=None):
 
 
 
-def check_results(spec_files, row_settings, trials, criteria, all_results=False):
+def check_results(spec_files, row_settings, trials, criteria, all_results=False, clean_results=False):
     assert trials >= 1
     spec_files = [spec_files]
     row_settings = [row_settings]    
-    if all_results:
+    if clean_results: # only clean metrics exist for clean models
+        requests = ALL_CLEAN_REQUESTS
+    elif all_results:
         requests = 'all'
     else:
         requests = SLIM_REQUESTS
@@ -957,6 +959,7 @@ if __name__ == '__main__':
     parser.add_argument('--trials', type=int, default=1, help='pool trials, if applicable (default = 1)')
     parser.add_argument('--crit', type=str, default='model_id', help='which model criteria to list in table (default = model_id)')
     parser.add_argument('--all', action='store_true', help='print all metrics, default shows limited set')
+    parser.add_argument('--clean', action='store_true', help='print only clean metrics')
     # other
     parser.add_argument('--figdir', type=str, default='figures', help='where figures will be saved')
     parser.add_argument('--csv', action='store_true', help='when enabled, prints tables in a csv-like format')
@@ -990,4 +993,4 @@ if __name__ == '__main__':
         dataset_plots_merged(args.figdir, 'asr', unimodal=True)
     # use specs to load results
     if args.sf is not None:
-        check_results(args.sf, args.rows, args.trials, args.crit, args.all)
+        check_results(args.sf, args.rows, args.trials, args.crit, args.all, args.clean)
